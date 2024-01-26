@@ -33,7 +33,7 @@ void generate(vector<int> &arr, int n)
 // best case number found in the first iteration in middle itself
 void input_generator1(vector<pair<int, int>> &store)
 {
-    for (int i = 10; i <= 1e6; i *= 10)
+    for (int i = 1e2; i <= 1e6; i*=10)
     {
         vector<int> arr(i);
         generate(arr, i);
@@ -46,20 +46,20 @@ void input_generator1(vector<pair<int, int>> &store)
             auto start = high_resolution_clock::now();
             BinarySearch(arr, 0, i - 1, i / 2); // l and r and x
             auto stop = high_resolution_clock::now();
-            auto duration = duration_cast<nanoseconds>(stop - start);
+            auto duration = duration_cast<milliseconds>(stop - start);
 
             // time_req = clock() - time_req;
             t += duration.count();
         }
         t = (t / 10);
         t=t*1e7;
-        store.push_back({t, i});
+        store.push_back({i,t});
     }
 }
 // worst case :- number not found
 void input_generator2(vector<pair<int, int>> &store)
 {
-    for (int i = 10; i <= 1e6; i *= 10)
+    for (int i = 1; i <= 1e7; i *=10)
     {
         vector<int> arr(i);
         generate(arr, i);
@@ -77,7 +77,7 @@ void input_generator2(vector<pair<int, int>> &store)
             t += duration.count();
         }
         t = (t / 10);
-        store.push_back({t, i});
+        store.push_back({i,t});
     }
 }
 int main()
