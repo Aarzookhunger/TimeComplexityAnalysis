@@ -52,6 +52,7 @@ void input_generator1(vector<pair<int, int>> &store)
             t += duration.count();
         }
         t = (t / 10);
+        t=t*1e7;
         store.push_back({t, i});
     }
 }
@@ -63,14 +64,17 @@ void input_generator2(vector<pair<int, int>> &store)
         vector<int> arr(i);
         generate(arr, i);
 
-        clock_t time_req;
+        // clock_t time_req;
         int t = 0;
         for (int m = 1; m <= 10; m++)
         {
-            time_req = clock();
-            BinarySearch(arr, 0, i - 1, i + 1); // l and r and x
-            time_req = clock() - time_req;
-            t += (time_req);
+            auto start = high_resolution_clock::now();
+            BinarySearch(arr, 0, i - 1, i +2); // l and r and x
+            auto stop = high_resolution_clock::now();
+            auto duration = duration_cast<nanoseconds>(stop - start);
+
+            // time_req = clock() - time_req;
+            t += duration.count();
         }
         t = (t / 10);
         store.push_back({t, i});
