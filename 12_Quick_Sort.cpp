@@ -1,5 +1,7 @@
 // Quick Sort along with comparisons of Time Complexity of Average and Worst case of QS
 
+// As evident from the graph attached the complexity of worst case of Quick Sort(when elements are sorted) is more than the average case(random elements)
+// Blue graph depicts the worst case and green one the average case
 #include<bits/stdc++.h>
 using namespace std;
 using namespace std::chrono ;
