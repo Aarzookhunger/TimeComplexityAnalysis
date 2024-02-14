@@ -35,7 +35,7 @@ int kthPartition(vector<int> arr , int low , int high , int k)
 }
 void input_generator(vector<pair<int,int>> &store)
 {
-    for(int i=10; i<1e4 ; i+=100)
+    for(int i=10; i<=1e4; i+=1000)
     {
         vector<int> arr(i);
         generate(arr.begin() , arr.end() , rand) ;
@@ -45,7 +45,7 @@ void input_generator(vector<pair<int,int>> &store)
         for(int m=1 ; m<=10;m++)
         {
             auto start = high_resolution_clock::now();
-            kthPartition(arr,0,i-1,6);
+            kthPartition(arr,0,i-1,i+6);
             auto stop = high_resolution_clock::now();
             auto duration = duration_cast<nanoseconds>(stop - start);
 
