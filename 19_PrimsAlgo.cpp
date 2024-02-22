@@ -110,7 +110,7 @@ class PrimsAlgo
             
             MST[j][1] = u;
             MST[j][2] = near[u] ;
-            if(G[u][near[u]]!=1e9 ||G[u][near[u]]!=0 )
+            if(G[u][near[u]]!=1e9 && G[u][near[u]]!=0 )
             minCost += G[u][near[u]];
             near[u] =0 ;
             for(int k=1; k<=n ; k++)
@@ -119,8 +119,7 @@ class PrimsAlgo
                 near[w] = u ;
             }
         }  
-
-        // cout << "MINCOST IS " << minCost << endl ;
+        cout << "MINCOST IS " << minCost << endl ;
     }
 };
 
