@@ -1,3 +1,8 @@
+/*
+	In 0/1 Knapsack problem, we're given a maximum weight that a bag can hold and according to that we've to choose the items from given list such that profit obtained 
+ 	is maximised.
+*/
+
 #include<bits/stdc++.h>
 using namespace std ; 
 int main()
