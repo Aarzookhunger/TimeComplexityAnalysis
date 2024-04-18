@@ -1,3 +1,8 @@
+/*
+  Given two strings, we've to find the longest common subsequence among that. 
+  We start with the iteration of both the strings and keep moving our pointers according to the condition they satisfy.
+*/
+
 #include<bits/stdc++.h>
 using namespace std ;
 int main () 
