@@ -1,3 +1,10 @@
+/*
+  Given N queens and these queens needs to be placed in n x n matrix such that :- 
+    No two queens are placed in the same row.
+    No two queens are placed in the same column.
+    No two queens are in the same diagonal
+  We can solve this problem using backtracking, whenever we place a new queen in a particular row we backtrack and check if all the conditions are being satisfied if we do so
+*/
 #include <bits/stdc++.h>
 using namespace std ;
 class NQueen
