@@ -1,3 +1,9 @@
+/*
+  Given a graph G, we've to color it's vertexes such that no two adjacent vertex gets same color. For this we've been provided with a k which denotes the number
+  of different colors made available to us.
+  We use the concept of backtracking to solve this problem.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 class GraphColor
